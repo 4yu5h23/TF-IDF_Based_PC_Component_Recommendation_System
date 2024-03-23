@@ -1,15 +1,15 @@
 from seleniumbase import SB
 from bs4 import BeautifulSoup
 import csv
-
+import os
 
 def verify_success(sb):
     sb.assert_element('img[alt="PCPartPicker"]', timeout=8)
-    sb.sleep(4)
+    sb.sleep(0)
 
 
 build_links=[]       
-for i in range(1, 21):
+for i in range(1,10):
     with SB(uc_cdp=True, guest_mode=True) as sb:
         sb.open("https://pcpartpicker.com/builds/#c=1495,1401,1505,1504,1503,1525,1508,1527,1510,1465&g=552,553,550,549,542,539&page="+str(i))
         try:
@@ -31,10 +31,9 @@ for i in range(1, 21):
             build_links.append("www.pcpartpicker.com"+build['href'])
 
 
-with open('build_links.csv', 'a', newline='') as file: # a=append and w=write
+with open('build_links.csv', 'a', newline='') as file:
     writer = csv.writer(file)
-    writer.writerow(["Build Links"])  # Write header
+    if os.stat('build_links.csv').st_size == 0:  # If file is empty
+        writer.writerow(["Build Links"])  # Write header
     for link in build_links:
         writer.writerow([link])
-
-
