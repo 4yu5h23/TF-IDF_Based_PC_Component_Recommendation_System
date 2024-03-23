@@ -12,4 +12,4 @@ for job in jobs:
     company_name = job.find('h3', class_='joblist-comp-name').text
     company_name = strip_spaces_and_empty_lines(company_name)
     comp_names.append(company_name)
-print(comp_names)
+print(comp_name)
