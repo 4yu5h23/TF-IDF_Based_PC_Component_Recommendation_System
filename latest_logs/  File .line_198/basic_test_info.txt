@@ -1,16 +1,17 @@
   File .py:198:SB
 --------------------------------------------------------------------
 Last Page: https://pcpartpicker.com/b/VMHzK8
- Duration: 20.05s
+ Duration: 10.06s
   Browser: Chrome 123.0.6312.59
    Driver: chromedriver 123.0.6312.58
-Timestamp: 1711201421  (Unix Timestamp)
-     Date: Saturday, 23 March 2024
-     Time: 7:13:41 PM  (India Standard Time, UTC+05:30)
+Timestamp: 1711278589  (Unix Timestamp)
+     Date: Sunday, 24 March 2024
+     Time: 4:39:49 PM  (India Standard Time, UTC+05:30)
 --------------------------------------------------------------------
 Traceback:
   File "c:\Users\ayush\Desktop\MPL SEM6\scraper\venv\Lib\site-packages\IPython\core\interactiveshell.py", line 3577, in run_code
     exec(code_obj, self.user_global_ns, self.user_ns)
-  File "C:\Users\ayush\AppData\Local\Temp\ipykernel_26800\752851025.py", line 12, in <module>
-    raise Exception("Detected!")
-Exception: Detected!
+  File "C:\Users\ayush\AppData\Local\Temp\ipykernel_23356\2814799755.py", line 1, in <module>
+    partslist = soup.find('tbody')
+                ^^^^
+Exception: name 'soup' is not defined
