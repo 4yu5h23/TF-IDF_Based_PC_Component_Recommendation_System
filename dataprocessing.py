@@ -1,7 +1,7 @@
 import csv
 import re
 
-with open('builds.csv', 'r') as file:
+with open('builds_raw_data', 'r') as file:
     csvreader = csv.reader(file)
     cpus = []
     motherboards = []
@@ -96,7 +96,7 @@ print(len(motherboardschanged))
 print(len(gpuschanged))
 print(len(psuschanged))
 
-with open('buildsfinal2.csv', 'w', newline='') as file:
+with open('builds_cleaned_data', 'w', newline='') as file:
     writer = csv.writer(file)
     writer.writerow(['Build No.','CPU','Motherboard','RAM','GPU','PSU'])
     for i in range(len(cpuschanged)):

@@ -31,7 +31,7 @@ for i in range(21,51):
             build_links.append("www.pcpartpicker.com"+build['href'])
 
             
-with open('build_links.csv2', 'a', newline='') as file:
+with open('build_links2.csv', 'a', newline='') as file:
     writer = csv.writer(file)
     if os.stat('build_links.csv').st_size == 0:  # If file is empty
         writer.writerow(["Build Links"])  # Write header
